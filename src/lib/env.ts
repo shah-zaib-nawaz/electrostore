@@ -11,7 +11,7 @@ export const envSchema = z.object({
   RESEND_API_KEY: z.string().default('re_mock_key'),
   STRIPE_SECRET_KEY: z.string().default('sk_test_mock_stripe_key'),
   STRIPE_WEBHOOK_SECRET: z.string().default('whsec_mock_stripe_webhook'),
-  NEXT_PUBLIC_APP_URL: z.string().url().default('http://localhost:3000'),
+  NEXT_PUBLIC_APP_URL: z.string().url().default('https://ai-electrostore.vercel.app'),
 });
 
 // Ahead-of-Time Compiled Validator for zero overhead
@@ -30,5 +30,5 @@ export const env = envSchema.parse({
   RESEND_API_KEY: process.env.RESEND_API_KEY,
   STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
   STRIPE_WEBHOOK_SECRET: process.env.STRIPE_WEBHOOK_SECRET,
-  NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
+  NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined),
 });

@@ -16,7 +16,7 @@ interface ResetPasswordProps {
 }
 
 export function ResetPassword({
-  url = 'https://electrostore.ai/reset-password?token=example-token',
+  url = 'https://ai-electrostore.vercel.app/reset-password?token=example-token',
   name = 'Shopper',
 }: ResetPasswordProps) {
   return (

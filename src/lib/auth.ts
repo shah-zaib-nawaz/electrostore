@@ -16,10 +16,23 @@ const stripeClient = new Stripe(env.STRIPE_SECRET_KEY, {
   apiVersion: '2025-02-24.acacia' as any,
 });
 
+const appHostname = (() => {
+  try {
+    return new URL(env.NEXT_PUBLIC_APP_URL).hostname;
+  } catch {
+    return 'ai-electrostore.vercel.app';
+  }
+})();
+
 export const auth = betterAuth({
   database: mongodbAdapter(db),
   secret: env.BETTER_AUTH_SECRET,
   baseURL: env.NEXT_PUBLIC_APP_URL,
+  trustedOrigins: [
+    env.NEXT_PUBLIC_APP_URL,
+    'https://ai-electrostore.vercel.app',
+    'http://localhost:3000',
+  ],
   emailAndPassword: {
     enabled: true,
     autoSignIn: true,
@@ -57,7 +70,8 @@ export const auth = betterAuth({
     }),
     passkey({
       rpName: 'ElectroStore AI',
-      rpID: typeof window !== 'undefined' ? window.location.hostname : 'localhost',
+      rpID: appHostname,
+      origin: env.NEXT_PUBLIC_APP_URL,
     }),
     stripe({
       stripeClient,

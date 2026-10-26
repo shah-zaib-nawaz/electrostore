@@ -30,7 +30,7 @@ export function PostPurchaseReviewRequestEmail({
           </Text>
           <Hr style={{ borderColor: '#e5e7eb', margin: '20px 0' }} />
           <Button
-            href={`https://electrostore.ai/product/${productSlug}#reviews`}
+            href={`https://ai-electrostore.vercel.app/product/${productSlug}#reviews`}
             style={{
               backgroundColor: '#10b981',
               color: '#ffffff',

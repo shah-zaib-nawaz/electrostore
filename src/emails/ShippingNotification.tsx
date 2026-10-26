@@ -37,7 +37,7 @@ export function ShippingNotificationEmail({
           </Text>
           <Hr style={{ borderColor: '#e5e7eb', margin: '20px 0' }} />
           <Button
-            href={`https://electrostore.ai/account/orders/${orderId}`}
+            href={`https://ai-electrostore.vercel.app/account/orders/${orderId}`}
             style={{
               backgroundColor: '#2563eb',
               color: '#ffffff',

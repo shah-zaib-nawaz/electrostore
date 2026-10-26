@@ -28,7 +28,7 @@ export function WelcomeEmail({
           </Text>
           <Hr style={{ borderColor: '#e5e7eb', margin: '20px 0' }} />
           <Button
-            href="https://electrostore.ai/products"
+            href="https://ai-electrostore.vercel.app/products"
             style={{
               backgroundColor: '#2563eb',
               color: '#ffffff',

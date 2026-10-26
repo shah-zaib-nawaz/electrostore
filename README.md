@@ -2,6 +2,8 @@
 
 > An enterprise-grade, AI-first e-commerce platform built with **Next.js 16.4**, **React 19**, **MongoDB Atlas ($rankFusion)**, **Mongoose 9.11**, **Better Auth 1.7**, **Stripe Embedded Checkout**, and **Vercel AI SDK v7**.
 
+🔗 **Live Production Deployment:** [https://ai-electrostore.vercel.app](https://ai-electrostore.vercel.app)
+
 ---
 
 ## 🌟 Overview

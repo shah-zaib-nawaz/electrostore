@@ -8,6 +8,7 @@ import {
   Heading,
   Text,
   Hr,
+  Button,
 } from 'react-email';
 
 interface OrderConfirmationProps {
@@ -64,6 +65,22 @@ export function OrderConfirmationEmail({
             <Text style={{ fontSize: '18px', fontWeight: 'bold', color: '#2563eb' }}>
               ${total.toFixed(2)}
             </Text>
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '24px' }}>
+            <Button
+              href="https://ai-electrostore.vercel.app/account/orders"
+              style={{
+                backgroundColor: '#2563eb',
+                color: '#ffffff',
+                padding: '12px 24px',
+                borderRadius: '6px',
+                textDecoration: 'none',
+                fontWeight: 'bold',
+                display: 'inline-block',
+              }}
+            >
+              View Order in Dashboard
+            </Button>
           </div>
           <Text style={{ fontSize: '14px', color: '#9ca3af', marginTop: '30px', textAlign: 'center' }}>
             ElectroStore AI • Next-Generation Electronics

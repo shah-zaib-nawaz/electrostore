@@ -3,6 +3,7 @@ import './globals.css';
 import { ThemeProvider } from '@/components/layout/theme-provider';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://ai-electrostore.vercel.app'),
   title: 'ElectroStore AI | Next-Gen Electronics',
   description: 'AI-First Electronics E-Commerce Platform built with Next.js 16, Mongoose 9, Better Auth, and Vercel AI SDK v7',
 };

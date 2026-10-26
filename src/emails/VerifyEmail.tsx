@@ -16,7 +16,7 @@ interface VerifyEmailProps {
 }
 
 export function VerifyEmail({
-  url = 'https://electrostore.ai/verify-email?token=example-token',
+  url = 'https://ai-electrostore.vercel.app/verify-email?token=example-token',
   name = 'Shopper',
 }: VerifyEmailProps) {
   return (
