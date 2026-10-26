@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "mongodb": {
+      "command": "npx",
+      "args": ["-y", "@mongodb-js/mongodb-mcp-server"],
+      "env": { "MDB_MCP_CONNECTION_STRING": "${MONGODB_URI}" },
+      "redactSecrets": true
+    },
+    "stripe": {
+      "command": "npx",
+      "args": ["-y", "@stripe/mcp", "--tools=all"],
+      "env": { "STRIPE_SECRET_KEY": "${STRIPE_SECRET_KEY}" },
+      "redactSecrets": true
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}" }
+    }
+  },
+  "executionPolicy": {
+    "terminal": "request_review_on_destructive",
+    "browser": "autonomous_headless"
+  }
+}
